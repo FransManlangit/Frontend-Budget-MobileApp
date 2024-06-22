@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Start from "../screens/user/start";
+import Login from "../screens/user/login";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
 import baseURL from "../assets/common/baseUrl";
@@ -22,6 +23,13 @@ const UserNavigator = (props) => {
       <Stack.Screen
         name="Start"
         component={Start}
+        options={{
+          headerShown: false,
+        }}
+      />
+        <Stack.Screen
+        name="Login"
+        component={Login}
         options={{
           headerShown: false,
         }}
